@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="5.1" data-chapter-title="For multiple genomes alignment" data-filepath="51.md" data-basepath="." data-revision="Wed Nov 04 2015 18:24:07 GMT+0800 (CST)">
+    <div class="book" data-level="5.1" data-chapter-title="For multiple genomes alignment" data-filepath="51.md" data-basepath="." data-revision="Thu Nov 05 2015 12:05:32 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -425,15 +425,24 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="for-multiple-genomes-alignment">For multiple genomes alignment</h1>
-<p>The result folder contains folders listed below:</p>
-<pre><code>1. Genomes: Contains the information of individual files processed in this alignment, including: .fasta file after data preparation, information after repeat mask and the size analysis of the genome.
-2. Pairwise: Contains the results of pairwise alignment between reference genome and every other genomes in this alignment.
-3. jobID*_mz: Combine the individual result file of pairwise alignment into .maf file by Multiz. 
-4. jobID_fasta: Convert .maf file produced in the former step into .fasta file.
-5. jobID_refined: The .fasta file in the former step may contain gaps. After refinement, the final result of alignment is stored in the refined .fasta file. 
-6. jobID_vcf: Contains a .vcf file stored with the statistical analysis of SNP and indel information in the alignment results.
-7. jobID_phylo: Contains the result files related to the phylogenetic tree, including: the final phylogenetic tree in .nwk and .phy file style, a vector graphic in .svg file style and other intermediate files produced during the construction process by RAxML. 
-</code></pre><h6 id="jobid-refers-to-the-parameter-you-set-for-the-name-of-the-alignment">*jobID refers to the parameter you set for the name of the alignment.</h6>
+<p>The result folder contains folders listed below:<br><img src="pic/multi_yeast/results.png" alt="results" title="results">  </p>
+<ol>
+<li><p>Genomes: Contains the information of individual files processed in this alignment, including: .fasta file after data preparation, information after repeat mask and the size analysis of the genome.<br><img src="pic/multi_yeast/genomes.png" alt="genomes" title="genomes"><br>Take &quot;S288c&quot; folder as an example:<br><img src="pic/multi_yeast/genomes2.png" alt="genomes2" title="genomes2"><br>If your species has more than one chromosomes, there will be corresponding files for each of them.  </p>
+</li>
+<li><p>Pairwise: Contains the results of pairwise alignment between reference genome and every other genomes in this alignment.<br><img src="pic/multi_yeast/pairwise.png" alt="pairwise" title="pairwise"><br>Take &quot;S288CvsSaccharomyces_bayanus&quot; folder as an example:<br><img src="pic/multi_yeast/pairwise2.png" alt="pairwise2" title="pairwise2">  </p>
+</li>
+<li><p>jobID*_mz: Combine the individual result file of pairwise alignment into .maf file by Multiz.<br><img src="pic/multi_yeast/mz.png" alt="mz" title="mz"><br>This screenshot is only part of the result. There will be a file for each individual chromosome in reference genome.  </p>
+</li>
+<li><p>jobID_fasta: Convert .maf file produced in the former step into .fasta file.<br><img src="pic/multi_yeast/fas.png" alt="fas" title="fas"><br>This screenshot is only part of the result. There will be a file for each individual chromosome in reference genome.  </p>
+</li>
+<li><p>jobID_refined: The .fasta file in the former step may contain gaps. After refinement, the final result of alignment is stored in the refined .fasta file.<br><img src="pic/multi_yeast/refine.png" alt="refine" title="refine"><br>This screenshot is only part of the result. There will be a file for each individual chromosome in reference genome.  </p>
+</li>
+<li><p>jobID_vcf: Contains a .vcf file stored with the statistical analysis of SNP and indel information in the alignment results.<br><img src="pic/multi_yeast/vcf.png" alt="vcf" title="vcf"><br>This screenshot is only part of the result. There will be a file for each individual chromosome in reference genome.  </p>
+</li>
+<li><p>jobID_phylo: Contains the result files related to the phylogenetic tree, including: the final phylogenetic tree in .nwk and .phy file style, a vector graphic in .svg file style and other intermediate files produced during the construction process by RAxML.<br><img src="pic/multi_yeast/phy.png" alt="phy" title="phy">  </p>
+<h6 id="jobid-refers-to-the-parameter-you-set-for-the-name-of-the-alignment">*jobID refers to the parameter you set for the name of the alignment.</h6>
+</li>
+</ol>
 
                     
                     </section>

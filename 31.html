@@ -48,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="3.1" data-chapter-title="Example 1: Intra-species Alignment" data-filepath="31.md" data-basepath="." data-revision="Wed Nov 04 2015 18:24:07 GMT+0800 (CST)">
+    <div class="book" data-level="3.1" data-chapter-title="Example 1: Intra-species Alignment" data-filepath="31.md" data-basepath="." data-revision="Thu Nov 05 2015 12:05:32 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -426,23 +426,23 @@
                     
                         <h1 id="example-1-yeast-genomes-alignment">Example 1: Yeast Genomes Alignment</h1>
 <p>Let&#x2019;s take this unicellular eukaryotic model organism for example and provide a detailed description. </p>
-<p>We are going to compare nine yeast strains, which are Saccharomyces cerevisiae, Lachancea kluyveri, Saccharomyces bayanus, Saccharomyces bayanus var. uvarum, Saccharomyces castellii, Saccharomyces kudriavzevii, Saccharomyces mikatae, Saccharomyces paradoxus, Saccharomyces pastorianus respectively. All the genomes are accessible at Saccharomyces Genome Database (<a href="http://www.yeastgenome.org/download-data/sequence" target="_blank">http://www.yeastgenome.org/download-data/sequence</a>).</p>
+<p>We are going to compare nine yeast strains, which are Saccharomyces cerevisiae, Lachancea kluyveri, Saccharomyces bayanus, Saccharomyces bayanus var. uvarum, Saccharomyces castellii, Saccharomyces kudriavzevii, Saccharomyces mikatae, Saccharomyces paradoxus, Saccharomyces pastorianus respectively. All the genomes are accessible at Saccharomyces Genome Database (<a href="http://www.yeastgenome.org/download-data/sequence" target="_blank">http://www.yeastgenome.org/download-data/sequence</a>).  </p>
+<p><img src="pic/multi_yeast/yeast_genome.png" alt="download" title="download">  </p>
 <p><strong>Data download and file format change</strong>
  Please rename the downloaded files with brief names (less than 30 characters). These names will also be used as the genome identities in result files. Besides, We provide a command line to format sequence headers. Files processed can be used for alignment.  </p>
 <pre><code>perl -ne &quot;if(/^\&gt;/){s/\W+/_/g; s/^\_/&gt;/; s/\_$/\n/;} print;&quot; example.fasta &gt;out.fa
 </code></pre><p>Notice that this command can process most of the sequences that are not downloaded form NCBI. For those sequences downloaded from NCBI, our website can process them automatically. </p>
 <p>For users&apos; convenience, we have provided a test account stored with the data used for example tests. You can log into the account for yeast with the username &quot;bacteria&quot; and password &quot;password&quot;.</p>
 <p><strong>Upload</strong>
-Click on &quot;Upload&quot; to enter the page after you log in the site. The upload page shows an upload dialog. If you need to upload a genome file, you can select a file in the open dialog box, and click on the &#x201C;Upload&#x201D; button. For a web-based alignment instead of process through a virtual machine, the individual file size is limited to 30M. Only three kinds of file types are accepted: .fasta, .fasta.gz, .newick. You can click on the red button to remove an uploaded file. <em><strong>Do not</strong></em> refresh the page while uploading a file!</p>
+Click on &quot;Upload&quot; to enter the page after you log in the site. The upload page shows an upload dialog.<br><img src="pic/multi_yeast/upload.png" alt="upload" title="upload"><br>If you need to upload a genome file, you can select a file in the open dialog box, and click on the &#x201C;Upload&#x201D; button. For a web-based alignment instead of process through a virtual machine, the individual file size is limited to 30M. Only three kinds of file types are accepted: .fasta, .fasta.gz, .newick. You can click on the red button to remove an uploaded file. <em><strong>Do not</strong></em> refresh the page while uploading a file!</p>
 <p><strong>Alignment</strong>
-You can click on the &#x201C;Align&#x201D; button on the menu to enter the align page. At this page you should set some parameters for the construction of alignments, such as the name of this alignment job, a target genome, at least one query genome. Besides, you can choose to provide a guide tree or not. The absence of a guide tree will take a while for us to generate one. We also provide a recommended realigning method.</p>
-<p>After parameter settings are completed, you can click on &#x201C;Begin aligning&#x201D; button to jump to the processing page automatically.</p>
-<p>This page displays three dialog boxes. The dialog above contains parameters set in the previous step. You can&#x2019;t open a new job if the current one has not finished. When your job is completed or you want this job terminated, you can click on the red button at the top-right corner and open up a new task. Notice that terminated job can&#x2019;t recover.  </p>
-<p>The middle dialog contains buttons for different processing stages. Among them, the first step is data pre-processing. You can click on the &#x201C;prepare.sh&#x201D; to start a job running. The information section contains general information about the running task including the start and end times and running status. </p>
+You can click on the &#x201C;Align&#x201D; button on the menu to enter the align page.<br><img src="pic/multi_yeast/set.png" alt="set" title="set"><br>At this page you should set some parameters for the construction of alignments, such as the name of this alignment job, a target genome, at least one query genome. Besides, you can choose to provide a guide tree or not. The absence of a guide tree will take a while for us to generate one. We also provide a recommended realigning method.</p>
+<p>After parameter settings are completed, you can click on &#x201C;Begin aligning&#x201D; button to jump to the processing page automatically.<br><img src="pic/multi_yeast/pre.png" alt="pre" title="pre"><br>This page displays three dialog boxes. The dialog above contains parameters set in the previous step. You can&#x2019;t open a new job if the current one has not finished. When your job is completed or you want this job terminated, you can click on the red button at the top-right corner and open up a new task. Notice that terminated job can&#x2019;t recover.  </p>
+<p>The middle dialog contains buttons for different processing stages. Among them, the first step is data pre-processing. You can click on the &#x201C;prepare.sh&#x201D; to start a job running.<br><img src="pic/multi_yeast/postpre.png" alt="postpre" title="postpre"><br>The information section contains general information about the running task including the start and end times and running status. </p>
 <p>Below is progress information for the particular run step. When the last line shows &#x201C;*<strong>DONE*</strong>&#x201D;, the step is supposed to be completed. Users may refresh this page and move on to the next step.   </p>
 <p>After the pre-processing completes, refresh the page and buttons for the rest steps will appear in the middle dialog box. Users may click on buttons in sequence to generate an alignment. For every step, when the last line shows &#x201C;*<strong>DONE*</strong>&#x201D;, the task is completed and you can move on to the next step.  </p>
 <p><strong>Downloading results</strong>
-After all jobs are done, users may click on the red &#x201C;finish&#x201D; button and download the results generated in every step.  </p>
+After all jobs are done, users may click on the red &#x201C;finish&#x201D; button and download the results generated in every step.<br><img src="pic/multi_yeast/finish.png" alt="finish" title="finish"><br><img src="pic/multi_yeast/result.png" alt="result" title="result"></p>
 
                     
                     </section>
